@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Inventario - BroadSonick</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sistema de Gestión de Inventario</h1>
+      <h2>Empresa BroadSonick</h2>
+    </header>
+
+    <main>
+      <!-- FORMULARIO PARA AGREGAR PRODUCTOS -->
+      <section class="form-section">
+        <h3>Agregar Producto</h3>
+
+        <form id="formProducto">
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre del producto"
+            required
+          />
+          <input type="text" id="categoria" placeholder="Categoría" required />
+          <input type="number" id="precio" placeholder="Precio" required />
+          <input type="number" id="stock" placeholder="Stock" required />
+          <button type="submit">Agregar</button>
+        </form>
+      </section>
+
+      <!-- TABLA DE INVENTARIO -->
+      <section>
+        <h3>Inventario</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaInventario"></tbody>
+        </table>
+
+        <h3 id="valorTotal">Valor Total: $0</h3>
+      </section>
+    </main>
+  </body>
+</html>
