@@ -18,3 +18,4 @@ Permite:
 - Aplicar impuesto automático
 
 Desarrollado como práctica del módulo M3 - Clase 9.
+Link a Pages: https://jessicasolaru.github.io/gestionInventario/
