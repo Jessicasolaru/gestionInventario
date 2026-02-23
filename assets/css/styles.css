@@ -1,15 +1,11 @@
-/* ========================= */
 /* RESET */
-/* ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ========================= */
 /* VARIABLES DE COLOR */
-/* ========================= */
 :root {
   --color-primario: #2563eb;
   --color-secundario: #1e293b;
@@ -20,9 +16,7 @@
   --sombra: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ========================= */
 /* ESTILO GENERAL */
-/* ========================= */
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   background-color: var(--color-fondo);
@@ -30,9 +24,7 @@ body {
   padding: 40px 20px;
 }
 
-/* ========================= */
 /* HEADER */
-/* ========================= */
 header {
   text-align: center;
   margin-bottom: 40px;
@@ -64,9 +56,8 @@ header h2 {
   width: 70px;
   height: auto;
 }
-/* ========================= */
+
 /* SECCIONES */
-/* ========================= */
 section {
   background: var(--color-blanco);
   padding: 25px;
@@ -79,9 +70,7 @@ h3 {
   margin-bottom: 15px;
 }
 
-/* ========================= */
 /* FORMULARIO */
-/* ========================= */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -120,9 +109,7 @@ form button:hover {
   transform: translateY(-1px);
 }
 
-/* ========================= */
 /* BUSCADOR */
-/* ========================= */
 .search-section input {
   width: 100%;
   padding: 10px 12px;
@@ -131,9 +118,7 @@ form button:hover {
   font-size: 14px;
 }
 
-/* ========================= */
 /* TABLA */
-/* ========================= */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -175,9 +160,7 @@ form select {
   background-color: white;
 }
 
-/* ========================= */
 /* INPUT STOCK EN TABLA */
-/* ========================= */
 td input[type="number"] {
   width: 70px;
   padding: 6px;
@@ -186,9 +169,7 @@ td input[type="number"] {
   text-align: center;
 }
 
-/* ========================= */
 /* BOTÓN ELIMINAR */
-/* ========================= */
 button {
   padding: 6px 12px;
   border-radius: 6px;
@@ -206,9 +187,7 @@ button[onclick^="eliminarProducto"] {
   color: white;
 }
 
-/* ========================= */
 /* TOTAL */
-/* ========================= */
 #valorTotal {
   margin-top: 20px;
   text-align: right;
@@ -217,9 +196,7 @@ button[onclick^="eliminarProducto"] {
   color: var(--color-primario);
 }
 
-/* ========================= */
 /* RESPONSIVE */
-/* ========================= */
 @media (max-width: 768px) {
   form {
     flex-direction: column;

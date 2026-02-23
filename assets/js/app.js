@@ -1,19 +1,13 @@
-// =============================
 // VARIABLES GLOBALES
-// =============================
 let inventario = JSON.parse(localStorage.getItem("inventario")) || [];
 let editandoId = null;
 
-// =============================
 // GENERAR ID ÚNICO
-// =============================
 function generarId() {
   return Date.now();
 }
 
-// =============================
 // AGREGAR O ACTUALIZAR PRODUCTO
-// =============================
 function guardarProducto(nombre, categoria, precioNeto, stock) {
   if (!nombre || !categoria || precioNeto <= 0 || stock < 0) {
     alert("Debe completar todos los campos correctamente");
@@ -56,18 +50,14 @@ function guardarProducto(nombre, categoria, precioNeto, stock) {
   document.getElementById("formProducto").reset();
 }
 
-// =============================
 // ELIMINAR PRODUCTO
-// =============================
 function eliminarProducto(id) {
   inventario = inventario.filter((p) => p.id !== id);
   guardarInventario();
   renderizarInventario();
 }
 
-// =============================
 // ACTIVAR EDICIÓN
-// =============================
 function editarProducto(id) {
   let producto = inventario.find((p) => p.id === id);
 
@@ -79,18 +69,14 @@ function editarProducto(id) {
   editandoId = id;
 }
 
-// =============================
 // BUSCAR PRODUCTO
-// =============================
 function buscarProducto(texto) {
   texto = texto.toUpperCase();
 
   return inventario.filter((producto) => producto.nombre.includes(texto));
 }
 
-// =============================
 // CALCULAR VALOR TOTAL
-// =============================
 function calcularValorTotal() {
   let total = 0;
   let i = 0;
@@ -103,16 +89,12 @@ function calcularValorTotal() {
   return total;
 }
 
-// =============================
 // GUARDAR EN LOCALSTORAGE
-// =============================
 function guardarInventario() {
   localStorage.setItem("inventario", JSON.stringify(inventario));
 }
 
-// =============================
 // RENDERIZAR TABLA
-// =============================
 function renderizarInventario(lista = inventario) {
   const tabla = document.getElementById("tablaInventario");
   tabla.innerHTML = "";
@@ -140,9 +122,7 @@ function renderizarInventario(lista = inventario) {
     "Valor Total del Inventario (con IVA): $" + calcularValorTotal();
 }
 
-// =============================
 // EVENTOS
-// =============================
 document
   .getElementById("formProducto")
   .addEventListener("submit", function (e) {
@@ -161,7 +141,5 @@ document.getElementById("buscador").addEventListener("input", function () {
   renderizarInventario(resultados);
 });
 
-// =============================
 // INICIALIZAR
-// =============================
 renderizarInventario();
